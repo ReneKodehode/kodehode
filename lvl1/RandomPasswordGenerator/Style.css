@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.hero {
+    font-size: 20px;
+}
+
+.row {
+ display: flex;
+ flex: 50%;
+ margin-bottom: 12px;
+}
+
+.content{
+    padding: 30px 50px;
+}
+
+.outputs {
+    margin: 10px;
+    
+}
+#buttonEl{
+ background: green;
+ padding: 10px 30px;
+ border: none;
+ box-sizing: border-box;
+ 
+ 
+}
+.outputFields{
+    margin:30px;
+    font-size: 25px;
+    border: solid  green;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.titleStyle {
+    color: green;
+}
+
+#inputEl {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+    text-decoration: underline;
+    margin: 10px;
+}

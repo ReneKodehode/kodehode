@@ -1,0 +1,20 @@
+body {
+    background-color: #F0F4EF;
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #344966;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+li {
+    margin: 17px;
+    text-align: center;
+    color: #0D1821;
+    font-size: 17px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}

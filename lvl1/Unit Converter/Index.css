@@ -1,0 +1,68 @@
+* { padding: 0; margin: 0; }
+
+body {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+    padding: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: gray;
+    font-size: ;
+    font-family: sans-serif;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: ;
+    font-family: sans-serif;
+    margin: 10px;
+}
+
+input {
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    font-family: sans-serif;
+    border: 0;
+    background: none;
+    outline: none;
+    text-decoration: underline;
+    padding: 50px;
+    
+
+}
+
+.InputBox {
+    text-align: center;
+    width: 100%;
+}
+
+.main {
+    background-image: linear-gradient(
+  45deg,
+  hsl(297deg 100% 40%) 1%,
+  hsl(285deg 68% 53%) 32%,
+  hsl(272deg 75% 61%) 43%,
+  hsl(258deg 83% 66%) 51%,
+  hsl(244deg 90% 70%) 58%,
+  hsl(230deg 97% 69%) 64%,
+  hsl(221deg 100% 65%) 69%,
+  hsl(213deg 100% 61%) 75%,
+  hsl(207deg 100% 57%) 82%,
+  hsl(203deg 98% 53%) 100%
+);
+}
+
+.content {
+    background: black;
+    padding: 80px;
+}

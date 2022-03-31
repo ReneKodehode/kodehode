@@ -1,0 +1,23 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10%;
+}
+
+#inputB {
+    margin-top: 10%;
+}
+
+#inputA {
+    margin-bottom: 10%;
+}
+
+#operator {
+    padding: 3% 10%;
+    font-size: 2em;
+    border: none;
+}

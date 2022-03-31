@@ -1,0 +1,8 @@
+body {
+    background-color: rgba(150, 150, 37,  0.3);
+}
+img {
+    opacity: 0.9;
+    border-radius: 30%;
+    filter: grayscale(100%);
+}

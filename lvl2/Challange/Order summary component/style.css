@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+.container {
+    font-family: arial;
+    font-size: 24px;
+    margin: 40px;
+    width: 100%;
+    height: 100%;
+
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.card {
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 16px;
+}
+
+.annual-plan{
+    height: auto;
+    width: 75%;
+    margin: auto;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.payment-text {
+    margin: auto;
+}
+
+#favicon {
+    margin: auto;
+    width: auto;
+}
+
+.btn-container {
+    margin: auto;
+    margin-top: 3%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-proceed {
+  margin-top: 5%;
+  width: auto;
+  height: 40px;
+  padding: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  background-color: #2e5fe5;
+}
+
+#btn-proceed:hover {
+    background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#btn-cancel {
+    margin-top: 5%;
+  width: auto;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+#btn-cancel:hover {
+    background-color: #e52e2e;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.midText {
+    margin: auto;
+}
+
+.AN-left {
+    font-size: 16px;
+    margin: auto;
+    width: auto;
+}
+
+.picture {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    shape-image-threshold: ;
+}
+.attribution { 
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
