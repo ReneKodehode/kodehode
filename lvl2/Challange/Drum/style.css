@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.child {
+    border: 2px solid black;
+    padding: 80px;
+    margin: 10px;
+}
+
+
+.play {
+    background-color: blue;
+    padding: 90px;
+}

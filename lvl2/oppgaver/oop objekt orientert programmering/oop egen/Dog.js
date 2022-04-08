@@ -8,25 +8,30 @@ class Dog {
     #color;
 
     constructor(name, race, gender, color) {
-        this.name = name;
-        this.race = race;
-        this.gender = gender;
-        this.color = color;
+        this.#name = name;
+        this.#race = race;
+        this.#gender = gender;
+        this.#color = color;
     }
 
     //get
     getName() {
-        return this.name;
+        return this.#name;
     }
 
     //set
     setName(newname) {
-        this.name = newname;
+        this.#name = newname;
     }
 
     //method
     printWholeDog() {
-        console.log(this.name + this.race + this.gender + this.color + this.dogTag);
+        console.log(this.#name + this.#race + this.#gender + this.#color);
+    }
+
+    getArray() {
+        let array = [this.#name, this.#race, this.#gender, this.#color];
+        return array;
     }
 
 }
