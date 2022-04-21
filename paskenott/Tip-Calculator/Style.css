@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 375px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+    font-size: 24px;
+}
+
+#billAmount {
+    text-align: right;
+    font-size: 24px;
+    background: url(tip-calculator-app-main/images/icon-dollar.svg) no-repeat scroll 7px 7px;
+}
+#peopleAmount {
+    text-align: right;
+    font-size: 24px;
+    background: url(tip-calculator-app-main/images/icon-person.svg) no-repeat scroll 7px 7px;
+}
+
+
+#logo {
+    width: 25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.content{
+    background-color: white; 
+    display: flex;
+    flex-direction: row;  
+    width: 80%;
+    
+    margin: 10%;
+    font-family: href="https://fonts.google.com/specimen/Space+Mono";
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.showDiv {
+    width: 50%;
+    border-radius: 20px;
+    background-color: hsl(183, 100%, 15%);
+}
