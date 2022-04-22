@@ -1,50 +1,101 @@
-body {
+*{
     margin: 0;
     padding: 0;
+}
+
+body {
     min-width: 375px;
     max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: hsl(185, 41%, 84%);
-    font-size: 24px;
+    font-size: 16px;
 }
 
 #billAmount {
     text-align: right;
-    font-size: 24px;
-    background: url(tip-calculator-app-main/images/icon-dollar.svg) no-repeat scroll 7px 7px;
+    font-size: 1rem;
+    background: url(./img/icon-dollar.svg) 10px no-repeat scroll;
 }
+.textNumberOfPeople{
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    margin-left: auto;
+    font-size: 14;
+ 
+}
+
+
+
 #peopleAmount {
     text-align: right;
-    font-size: 24px;
-    background: url(tip-calculator-app-main/images/icon-person.svg) no-repeat scroll 7px 7px;
+    font-size: 1rem;
+    background: url(./img/icon-person.svg) no-repeat scroll 10px;
 }
 
+button{
+    height: 2rem;
+    min-width: 25%;
+    border: none;
+    border-radius: 5px;
+    margin: 1px
+}
+
+#btnReset{
+    width: 50%;
+    border: none;
+    height: 2rem;
+    margin-left: 25%;
+    background-color: hsl(189, 41%, 97%);
+}
 
 #logo {
-    width: 25%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 25vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.content{
-    background-color: white; 
+.content {
+    background-color: white;
     display: flex;
-    flex-direction: row;  
-    width: 80%;
-    
-    margin: 10%;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    padding: 1rem;
     font-family: href="https://fonts.google.com/specimen/Space+Mono";
 }
+
 .inputDiv {
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding: 1%;
 }
 
 .showDiv {
     width: 50%;
+
     border-radius: 20px;
     background-color: hsl(183, 100%, 15%);
+    padding: 1%;
+}
+
+.checked {
+    background-color: red;
+}
+.right-side{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.left-side{
+    margin-right: auto;
+}
+.costumPerc {
+    
 }

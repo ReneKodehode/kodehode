@@ -5,20 +5,10 @@ const btnSortByName = document.querySelector("#btnSortByName");
 const btnSortByDate = document.querySelector("#btnSortByDate");
 const unorderedList = document.querySelector("ul")
 
-const ToDos = [];
-let flagHasRun = false;
+const ToDos = []
+let flagHasRun = false;;
 
-function populateToDos() {
-    if (flagHasRun === false) {
-        let parsedJSON = JSON.parse(localStorage.getItem("ToDos"));
-        for (let i = 0; i < parsedJSON.length; i++) {
-            //ToDos.push(parsedJSON[i]);
-            addToDo(parsedJSON[i].name, parsedJSON[i].stars, parsedJSON[i].date);
-            console.log("name " + parsedJSON[i].name + "stars" + parsedJSON[i].stars);
-            flagHasRun = true;
-        }
-    }
-}
+
 
 btnSortByImportance.addEventListener("click", () => {
     console.log("btnSortByImportance");
@@ -38,12 +28,10 @@ btnAdd.addEventListener("click", () => {
     addToDo(textField.value, document.querySelector('input[name="rating"]:checked').value, "");
 });
 
-document.querySelectorAll("button[name=remove]").forEach
-addEventListener((`click`), e => {
+document.body.addEventListener((`click`), e => {
     if (e.target.name === "remove") {
         //remove dom (LI)
         e.target.parentNode.remove();
-
         //remove from object list
         for (let todo in ToDos) {
             if (ToDos[todo].id === e.target.parentNode.id) {
@@ -51,8 +39,7 @@ addEventListener((`click`), e => {
             }
         }
         //update localstorage
-        localStorage.setItem("ToDos", JSON.stringify(ToDos));
-
+        updateLocalStorage();
     }
 });
 
@@ -60,9 +47,7 @@ window.addEventListener("load", () => {
     populateToDos();
 })
 
-function addToLocalStorage() {
-    localStorage.setItem("ToDos", JSON.stringify(ToDos));
-}
+
 
 function addToDo(text, stars, date) {
     const newLiElement = document.createElement("li");
@@ -106,7 +91,7 @@ function addToDo(text, stars, date) {
     console.log(todo);
 
     //add to LocalStorage
-    addToLocalStorage();
+    updateLocalStorage();
 
     renderToDo(newLiElement);
 }
@@ -146,6 +131,22 @@ function reRenderToDos() {
         }
         for (const todo of ToDos) {
             renderToDo(todo.li);
+        }
+    }
+}
+
+function updateLocalStorage() {
+    localStorage.setItem("ToDos", JSON.stringify(ToDos));
+}
+
+function populateToDos() {
+    if (flagHasRun === false) {
+        let parsedJSON = JSON.parse(localStorage.getItem("ToDos"));
+        for (let i = 0; i < parsedJSON.length; i++) {
+            //ToDos.push(parsedJSON[i]);
+            addToDo(parsedJSON[i].name, parsedJSON[i].stars, parsedJSON[i].date);
+            console.log("name " + parsedJSON[i].name + "stars" + parsedJSON[i].stars);
+            flagHasRun = true;
         }
     }
 }
