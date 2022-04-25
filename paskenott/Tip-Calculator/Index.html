@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
 </head>
 
@@ -13,20 +14,20 @@
     <img src="./img/logo.svg" id="logo">
     <content class="content">
         <div class="inputDiv">
-            <h2>Bill</h2>
-            <input type="text" value="142.55" id="billAmount">
+            <h1>Bill</h1>
+            <input type="text" value="0.000" id="billAmount" name="billAmount">
             <h2>Select Tip %</h2>
             <div class="buttonDIV">
                 <button id="btn5" name="percentage" value="5">5%</button><button id="btn10" name="percentage"
                     value="10">10%</button><button id="btn15" name="percentage" value="15">15%</button> <br></br>
                 <button id="btn25" name="percentage" value="25">25%</button><button id="btn50" name="percentage"
-                    value="50">50%</button> <input type="text class="costumPerc" , name="Cpercentage" placeholder="Costum">
+                    value="50">50%</button> <input type="text" class="costumPerc" name="Cpercentage" placeholder="Costum">
             </div>
             <div class="textNumberOfPeople">
-                <h2>Number of people</h2>
-                <h3 color="red">Can't be zero</h3>
+                <h1>Number of people</h1>
+                <h3 class="cantBeZero"></h3>
             </div>
-            <input type="text" value="1" id="peopleAmount">
+            <input type="text" value="1" id="peopleAmount" name="peopleAmount">
         </div>
 
         <div class="showDiv">
@@ -36,7 +37,7 @@
                          <h2>Tip Amount</h2>
                           <p>/person</p>
                     </div>
-                    <h1 id="tipPP">0.00</h1>
+                    <h1 id="tipPP">0.000</h1>
                 </div>
 
                 <div class="right-side">
@@ -45,10 +46,10 @@
                         <p>/person</p>
                     </div>
                     
-                    <h1 id="totalPP">0.00</h1>
+                    <h1 id="totalPP">0.000</h1>
                 </div>
             </div>
-                <button id="btnReset">Reset</button>
+                <button id="btnReset" value="0">Reset</button>
         </div>
     </content>
     <script src="Script.js"></script>
