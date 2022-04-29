@@ -3,8 +3,9 @@ import { StyledButton, StyledContentDiv, StyledOutputText} from './appPage/AppPa
 
 export default function AppPage() {
  const [counter, setCounter] = useState();
+ const [isShowApp, setIsShowApp] = useState(0);
 
- //useEffect do once.. set counter to 200
+ //useEffect do once on page load
   useEffect(() => {
     setCounter(200);
     }, [])
@@ -22,14 +23,25 @@ export default function AppPage() {
       case "Decrement":
           setCounter(counter -1);
           break;
+      case "Show app":
+        setIsShowApp(1);
+          break;
       }
     }
 
+if (isShowApp){
   return (
     <StyledContentDiv>
       <StyledButton btnText={"Increment"} backgroundColor={"green"} onButtonClicked={buttonClicked}></StyledButton>
       <StyledButton btnText={"Decrement"} backgroundColor={"red"} onButtonClicked={buttonClicked}></StyledButton>
       <StyledOutputText text={counter}></StyledOutputText>
     </StyledContentDiv>
-  )
+  )}
+else {
+  return (
+    <StyledContentDiv>
+      <StyledButton btnText={"Show app"} backgroundColor={"blue"} onButtonClicked={buttonClicked}></StyledButton>
+    </StyledContentDiv>
+  )}
+  
 }
