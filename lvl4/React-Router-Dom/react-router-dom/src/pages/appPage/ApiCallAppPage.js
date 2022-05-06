@@ -3,34 +3,28 @@ import words from "./apiCallAppPage/Words.txt";
 
 export default function ApiCallAppPage() {
   const [data, dataSet] = useState();
-  const [word, setWord] = useState("hello");
 
   useEffect(() => {
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/` + getURL();
-    async function fetchMyAPI() {
-      let response = await fetch(url);
-      console.log(url);
-      response = await response.json();
-      console.log(response);
-      //const newResponse = response.map((response, idx) => response);
-      dataSet(response[0]);
-    }
-
     fetchMyAPI();
   }, []);
+  async function fetchMyAPI() {
+    let response = await fetch(words);
+    response = await response.text();
+    let arrayOfWords = response.split("\n");
+    let randomIDX = Math.floor(Math.random() * arrayOfWords.length);
+    let randomWord = arrayOfWords[randomIDX];
+    randomWord.trim();
+    randomWord.replace(/\s/g, "%20");
+    randomWord.replace(/-/g, "");
 
-  function getURL() {
-    fetch(words)
-      .then((r) => r.text())
-      .then((text) => {
-        let arrayOfWords = text.split("\n");
-        let randomIDX = Math.floor(Math.random() * arrayOfWords.length);
-        let randomWord = arrayOfWords[randomIDX];
-        randomWord.trim();
-        console.log(randomWord);
-        setWord(randomWord);
-        return "hello";
-      });
+    let res = await fetch(
+      `https://api.dictionaryapi.dev/api/v2/entries/en/` + (await randomWord)
+    );
+    console.log(randomWord);
+    res = await res.json();
+    console.log(res);
+    //const newResponse = response.map((response, idx) => response);
+    dataSet(res[0]);
   }
 
   if (data) {
