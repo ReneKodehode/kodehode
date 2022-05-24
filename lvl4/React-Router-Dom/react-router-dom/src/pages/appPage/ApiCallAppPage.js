@@ -7,6 +7,7 @@ export default function ApiCallAppPage() {
   useEffect(() => {
     fetchMyAPI();
   }, []);
+
   async function fetchMyAPI() {
     let response = await fetch(words);
     response = await response.text();
