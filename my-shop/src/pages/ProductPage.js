@@ -20,24 +20,31 @@ import {
   UnCheckedRating,
 } from "./productPage/ProductStyle";
 
+import Products from "../ProductLists";
+import { useEffect, useState } from "react";
+
 export default function ProductPage() {
+  const [products, productsSet] = useState(Products);
+  const [selectedProduct, selectedProductSet] = useState(Products);
+
+  useEffect(() => {
+    selectedProductSet(products[0]);
+  }, []);
+
   return (
     <ProductPageContentDiv>
       <ProductHeader>
         <ProductTextDiv>
-          <ProductTitle>Product Title</ProductTitle>
-          <ProductDescription>Product description</ProductDescription>
-          <ProductIdAndNumber>Product ID and Product Number</ProductIdAndNumber>
+          <ProductTitle>{selectedProduct.name}</ProductTitle>
+          <ProductDescription>
+            {selectedProduct.ProductDescription}
+          </ProductDescription>
+          <ProductIdAndNumber>
+            ProductID: {selectedProduct.id} productNumber:{" "}
+            {selectedProduct.number}
+          </ProductIdAndNumber>
         </ProductTextDiv>
-        <ProductRatingDiv>
-          <CheckedRating></CheckedRating>
-          <CheckedRating></CheckedRating>
-          <CheckedRating></CheckedRating>
-          <CheckedRating></CheckedRating>
-          <HalfCheckedRating></HalfCheckedRating>
-          <UnCheckedRating></UnCheckedRating>
-          <RatingInNumber>4.5/6</RatingInNumber>
-        </ProductRatingDiv>
+        <ProductRatingDiv rating={selectedProduct.rating} />
       </ProductHeader>
 
       <ProductContent>
@@ -47,8 +54,10 @@ export default function ProductPage() {
 
         <ProductSecondaryDiv>
           <ProductShopDiv>
-            <ProductBeforePrice>2145.-</ProductBeforePrice>
-            <ProductNowPrice>2100.-</ProductNowPrice>
+            <ProductBeforePrice>
+              {selectedProduct.beforePrice}.-
+            </ProductBeforePrice>
+            <ProductNowPrice>{selectedProduct.price}.-</ProductNowPrice>
             <AddToShoppingCart>Add To Shopping Cart</AddToShoppingCart>
           </ProductShopDiv>
         </ProductSecondaryDiv>

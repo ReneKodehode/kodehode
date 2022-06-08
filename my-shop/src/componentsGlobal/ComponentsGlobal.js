@@ -1,18 +1,22 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React from "react";
+import Menu from "../img/Menu.svg";
+import User from "../img/User.svg";
+import ShopCart from "../img/ShopCart.svg";
 
-export const NavBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem;
-  left: 0;
-  right: 0;
-`;
+export const menuBar = ({ className }) => {
+  return <img src={Menu} alt="menu bar" className={className}></img>;
+};
 
-export const NavLink = styled(Link)`
-  color: black;
-  margin-right: 1rem;
-`;
+export const user = ({ className }) => {
+  return <img src={User} alt="my page" className={className}></img>;
+};
 
-export const Logo = styled(Link)``;
+export const shopCart = ({ className }) => {
+  return <img src={ShopCart} alt="Shopping Cart" className={className}></img>;
+};
+
+export const searchBar = ({ className }) => {
+  return (
+    <input className={className} type="text" placeholder="Search..."></input>
+  );
+};

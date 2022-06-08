@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   checkedRating,
   halfCheckedRating,
+  productRatingDiv,
   unCheckedRating,
 } from "./ProductComponents";
 
@@ -35,14 +36,26 @@ export const ProductTextDiv = styled.div`
   margin-right: auto;
 `;
 
-export const ProductRatingDiv = styled.div`
+export const ProductRatingDiv = styled(productRatingDiv)`
   display: flex;
   flex-direction: row;
   margin-left: auto;
   margin-top: auto;
+
+  p {
+    width: 50px;
+  }
+
+  img {
+    width: 50px;
+  }
 `;
 
-export const ProductShopDiv = styled.div``;
+export const ProductShopDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export const ProductBeforePrice = styled.p`
   text-decoration: line-through;
@@ -67,18 +80,18 @@ export const ProductImageDiv = styled.div`
   background-color: gray;
 `;
 
-export const RatingInNumber = styled.p`
-  width: 50px;
-`;
+// export const RatingInNumber = styled.p`
+//   width: 50px;
+// `;
 
-export const CheckedRating = styled(checkedRating)`
-  width: 50px;
-`;
+// export const CheckedRating = styled(checkedRating)`
+//   width: 50px;
+// `;
 
-export const UnCheckedRating = styled(unCheckedRating)`
-  width: 50px;
-`;
+// export const UnCheckedRating = styled(unCheckedRating)`
+//   width: 50px;
+// `;
 
-export const HalfCheckedRating = styled(halfCheckedRating)`
-  width: 50px;
-`;
+// export const HalfCheckedRating = styled(halfCheckedRating)`
+//   width: 50px;
+// `;
